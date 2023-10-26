@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+
+        #heading
+        {
+            color: rgb(206, 55, 55);
+            font-size: 50px;
+            font-style: italic;
+        }
+        #calculator
+        {
+            position:absolute;
+            width: 400px;
+            height:600px;
+            border: 10px solid #FF8080;
+            background-color: #F6FDC3;
+            border-radius: 30px;
+        }
+        #display
+        {
+            position: absolute;
+            left:10%;
+            right:10%;
+            top:20px;
+            height:60px;
+            font-size: 30px;
+        }
+        #button-set
+        {
+            position: absolute;
+            top:100px;
+        }
+        .buttons
+        {
+            text-align: center;
+            font-size: 20px;
+            border: 4px solid #19c438;
+            border-radius: 7px;
+            background-color: #FFCF96;
+            width:60px;
+            height:60px;
+            margin:10px 8px;
+        }
+        #number-buttons
+        {
+            position:absolute;
+            left:15%;
+            right:15%;
+        }
+        .buttons1
+        {
+            text-align: center;
+            font-size: 30px;
+            border: 4px solid #19c438; 
+            border-radius: 10px;
+            background-color: #FFCF96;
+            width:70px;
+            height:70px;
+            margin:10px 8px;
+        }
+
+    </style>
+    
+    <title>Calculator by Aditya Technologies</title>
+</head>
+<body>
+    <h1 id="heading" draggable="true">CALCULATOR</h1>
+    
+    <div id="calculator">
+        <input type="text" id="display">
+        <div id="button-set">
+            <button class="buttons"onclick="currvalue=''; document.getElementById('display').value=currvalue;">C</button>
+            <button class="buttons"onclick="currvalue+='+'; document.getElementById('display').value=currvalue;">+</button>
+            <button class="buttons"onclick="currvalue+='-'; document.getElementById('display').value=currvalue;">-</button>
+            <button class="buttons"onclick="currvalue+='*'; document.getElementById('display').value=currvalue;">*</button>
+            <button class="buttons"onclick="currvalue+='/'; document.getElementById('display').value=currvalue;">/</button>
+            <br>
+            <div id="number-buttons">
+            <button class="buttons1" onclick="currvalue+='9'; document.getElementById('display').value=currvalue;">9</button>
+            <button class="buttons1"onclick="currvalue+='8'; document.getElementById('display').value=currvalue;">8</button>
+            <button class="buttons1"onclick="currvalue+='7'; document.getElementById('display').value=currvalue;">7</button>
+            <br>
+            <button class="buttons1"onclick="currvalue+='6'; document.getElementById('display').value=currvalue;">6</button>
+            <button class="buttons1"onclick="currvalue+='5'; document.getElementById('display').value=currvalue;">5</button>
+            <button class="buttons1"onclick="currvalue+='4'; document.getElementById('display').value=currvalue;">4</button>
+            <br>
+            <button class="buttons1"onclick="currvalue+='3'; document.getElementById('display').value=currvalue;">3</button>
+            <button class="buttons1"onclick="currvalue+='2'; document.getElementById('display').value=currvalue;">2</button>
+            <button class="buttons1"onclick="currvalue+='1'; document.getElementById('display').value=currvalue;">1</button>
+            <br>
+            <button class="buttons1"onclick="currvalue+='0'; document.getElementById('display').value=currvalue;">0</button>
+            <button class="buttons1"onclick="currvalue+='.'; document.getElementById('display').value=currvalue;">.</button>
+            <button class="buttons1" onclick="let result=eval(currvalue);currvalue=result;document.getElementById('display').value=currvalue;">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let currvalue='';
+        document.getElementById('display').value=currvalue;
+
+    </script>
+</body>
+</html>
